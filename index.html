@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Scroll Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 800vh; /* Adjust this value based on the content height */
+            z-index:99;
+        }
+
+        body::-webkit-scrollbar {
+            background-color: transparent;
+            z-index: 9;
+            border-radius: 999px;
+
+            overflow: visible;
+        }
+        body::-webkit-scrollbar-thumb{
+            background: red;
+            border-radius: 999px;
+            display: block !important;
+            overflow: visible;
+            box-shadow: 0px 0px 15px red;
+            z-index: 199;
+        }
+
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #scroll-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="scroll-video" loop muted>
+            <source src="your-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      
+        document.addEventListener('DOMContentLoaded', function () {
+           // Scroll to the top of the page
+           window.scrollTo(0, 0);
+            const video = document.getElementById('scroll-video');
+            const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+            window.addEventListener('scroll', function () {
+                const scrollPosition = window.scrollY;
+                const scrollPercentage = (scrollPosition / totalScrollHeight) * 100;
+                const currentTime = (scrollPercentage / 100) * video.duration;
+
+                video.currentTime = currentTime;
+            });
+        });
+    </script>
+</body>
+</html>
