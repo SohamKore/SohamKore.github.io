@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700;800;900&family=Poppins:wght@500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S X H A M</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+            *{
+    margin: 0; padding: 0;
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: none;
+}
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: #170000;
+            overflow: hidden;
+            cursor: url(images/cursor.png), auto;
+            overflow: hidden;
+
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background:url(images/bg.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .content{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            position: absolute;
+            z-index: 4;
+            animation: slideUp 1s  200ms ease forwards;
+            bottom: -1900px;
+        }
+        .half{
+            height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+        }
+    .layer-0{
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        position: absolute;
+        right: 2900px;
+        background-image: url("About-Images/About-Layer-0-Bg.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: slideRight 1s 200ms ease forwards;
+        right: -1900px;
+    }
+    .layer-1{
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        /* right: 2900px; */
+        background-image:url("About-Images/About-Layer-1-Img.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: slideUp 1s  200ms ease forwards;
+        bottom: -1900px;
+    }
+    .layer-2{
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        /* right: 2900px; */
+
+        background-image: url("About-Images/About-Layer-1-Orb.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: slideUp 1s  500ms ease forwards;
+        bottom: -1900px;
+    }
+    @keyframes slideRight {
+    0%{
+        right: -1900px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+@keyframes slideUp {
+    0%{
+        bottom: -1900px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+#portfolio-Description{
+            color: white;
+            font-weight: 100;
+            max-width: 70%;
+            font-size: larger;
+
+
+        }
+        @media screen and (max-width: 850px) {
+            .layer-0{
+                background:url(About-Images/about-mobile-layer-0.png);
+                background-position: center;
+                background-size: cover;
+                right: 1900px;
+                z-index: 1;
+            }
+            .layer-1{
+                background:url(About-Images/about-mobile-layer-1.png);
+                background-position: center;
+                background-size: cover;
+                z-index: 0;
+                animation: slideDown 1s 200ms ease-in-out forwards;
+                top: 1900px;
+            }
+            .layer-2{
+                background:url(About-Images/about-mobile-layer-2.png);
+                background-position: center;
+                background-size: cover;
+                z-index: 2;
+                /* animation: slideDown 1s 200ms ease-in-out forwards; */
+            }   
+            .content{
+                flex-direction: column;
+                overflow: hidden;
+            }
+            .half{
+                height: 50%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                
+            }
+            #portfolio-Description {
+                color: white;
+                font-weight: 100;
+                max-height: 20vh;
+                max-width: 90%;
+                overflow: scroll;
+                font-size: small;
+                background-color: rgba(255, 255, 255, 0.086);
+                padding: 10px;
+                border-radius: 10px;
+
+            }
+            
+        }
+    </style>
+</head>
+<body >
+    <div class="container" style="background: #170000 !important;">
+        <div class="header">
+            <a href="index.html">Home</a>
+            <a class="currentPage" href="about.html">About</a>
+            <a href="Skills.html">Skills</a>
+        </div>
+        <div class="content">
+            <div class="half"></div>
+            <div class="half">
+                <h1 id="portfolio-Description">Hello and welcome to my portfolio! I'm Soham Kore, currently in my third year of Computer Engineering. It's currently 2:45 AM—yes, coding into the late hours has turned me into a bit of a nocturnal creature (cue Batman reference). With a passion for graphic design, the website you're browsing is my attempt at crafting a creative and fun online presence. Your feedback is always welcome, though I might be a bit biased in favor of my own work... Besides writing somewhat Unprofessional portfolio descriptions, I also do Software Development (Apps, Websites, and Games—I'm a beginner in Unity), Graphic Design, Shopify/Wordpress, and Social Media Marketing Agency (SMMA) services, albeit to a limited extent.</h1>
+            </div>
+        </div>
+        <div class="layer-2"></div>
+        <div class="layer-1"></div>
+        <div class="layer-0"></div>
+
+
+       
+  
+    </div>
+</body>
+<script>
+    document.addEventListener('click', function() {
+        window.location.href = 'Skills.html';
+    });
+</script>
+</html>

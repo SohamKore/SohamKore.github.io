@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S X H A M</title>
+    <style>
+        *{
+    margin: 0; padding: 0;
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+    transition: 500ms ease-in-out;
+    -webkit-tap-highlight-color: none;
+}
+        body{
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            cursor: url(images/cursor.png), auto;
+
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background:url(images/bg.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .bubbles{
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+            bottom: -1900px;
+            position: absolute;
+            background:url(images//Bubbles.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            filter: opacity(0.3);
+    animation: bubbleUp 1s 1s ease-out infinite;
+    bottom: 1900px;
+        }
+
+
+        .layer-0{
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+            position: absolute;
+            background:url(images/Layer-0.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: slideUp 1s  100ms ease forwards;
+            bottom: 1900px;
+        }
+        .layer-1{
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            position: absolute;
+            background:url(images/Layer-1.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: slideUp 1s  200ms ease forwards;
+            bottom: 1900px;
+
+        }
+        .layer-2{
+            height: 100%;
+            width: 100%;
+            z-index: 2;
+            position: absolute;
+            background:url(images/Layer-2.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: slideUp 1s  300ms ease forwards;
+            bottom: 1900px;
+        }
+
+        @keyframes bubbleUp {
+            0%{
+                bottom: -900px;
+            }
+            100%{
+                bottom: 1900px;
+            }
+        }
+
+        @keyframes slideUp {
+            0%{
+                bottom: -1900px;
+            }
+            100%{
+                bottom: 0px;
+            }
+        }
+        @keyframes blink {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 100%;
+            }
+        }
+        
+@media screen and (max-width: 1600px) {
+    /* .container{
+        display: none;
+    } */
+    .layer-0{
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        position: absolute;
+        background:url(images/Layer-0.png);
+        background-position: center;
+        background-size:contain;
+        background-repeat: no-repeat;
+        animation: slideUp 1s  200ms ease forwards;
+        bottom: 1900px;
+        /* display: none; */
+    }
+
+    .layer-1{
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        background:url(images/Layer-1.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: slideUp 1s  200ms ease forwards;
+        bottom: 1900px;
+    }
+    .layer-2{
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        background:url(images/Layer-2.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: slideUp 1s  300ms ease forwards;
+        bottom: 1900px;
+    }
+    .About-1{
+        height: 130%;
+        width: 100%;
+        bottom: 1900px;
+        z-index: 2;
+        position: absolute;
+        background:url(images/About-1.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: slideUp 1s  200ms ease forwards;
+        bottom: 1900px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    /* .container{
+        display: none;
+    } */
+    .layer-0{
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        position: absolute;
+        background:url(images/home-mobile-layer-0.png);
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: slideUp 1s  300ms ease forwards;
+        bottom: 1900px;
+
+    }
+
+    .layer-1{
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        background:url(images/home-mobile-layer-1.png);
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: slideUp 1s  250ms ease forwards;
+        bottom: 1900px;
+        
+    }
+    .layer-2{
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        background:url(images/home-mobile-layer-2.png);
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: slideUp 1s  100ms ease forwards;
+        bottom: 1900px;
+        
+    }
+    .About-1{
+        height: 100%;
+        width: 100%;
+        bottom: 1900px;
+        z-index: 0;
+        position: absolute;
+        background:url(images/home-mobile-about-1.png);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        animation: slideUp 1s  400ms ease forwards;
+        bottom: 1900px;
+    }
+
+    .bubbles{
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        bottom: -1900px;
+        position: absolute;
+        background:url(images//Bubbles.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: opacity(0.3);
+animation: bubbleUp 2s 500ms ease-out infinite;
+bottom: 1900px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <a class="currentPage" href="#">Home</a>
+            <a href="about.html">About</a>
+            <a href="Skills.html">Skills</a>
+        </div>
+        <div class="About-1"></div>
+                <!-- IMAGE SILLHOUETTETTETETETE -->
+        <div class="layer-2"></div>
+                <!-- NAME  -->
+        <div class="layer-1"></div>
+        <!-- NAME OUTLINE -->
+        <div class="layer-0"></div> 
+        <div class="bubbles"></div>
+
+        
+  
+    </div>
+</body>
+<script>
+    document.addEventListener('click', function() {
+        window.location.href = 'about.html';
+    });
+</script>
+
+</html>

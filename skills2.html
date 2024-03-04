@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S X H A M</title>
+    <style>
+                *{
+    margin: 0; padding: 0;
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: none;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    cursor: url(images/cursor.png), auto;
+
+}
+.container{
+    height: 100%;
+    width: 100%;
+    background-image: url("Skills-Images/bg-skills.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.layer-0{
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    background-image: url("Skills-Images/Layer-0.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: slideRight 1s  100ms ease forwards;
+}
+.layer-1{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    background-image: url("Skills-Images/Layer-1.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: slideUp 1s  300ms ease forwards;
+}
+.layer-2{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    background-image: url("Skills-Images/Layer-2.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: slideUp 1s  100ms ease forwards;
+}
+.layer-3{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    right: 1900px;
+    background-image: url("Skills-Images/Layer-3.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: slideRight 1s  300ms ease forwards;
+}
+@keyframes slideUp {
+    0%{
+        bottom: -1900px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+
+@keyframes slideRight {
+    0%{
+        left: -1900px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+    </style>
+</head>
+<body >
+    <div class="container">
+        <div class="layer-3"></div>
+        <div class="layer-2"></div>
+        <div class="layer-1"></div>
+        <div class="layer-0"></div>
+
+
+        
+  
+    </div>
+</body>
+</html>
